@@ -19,6 +19,7 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
 
+    d = 10
     b=10
     c=15
     model = Question
