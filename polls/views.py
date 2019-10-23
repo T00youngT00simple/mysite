@@ -12,16 +12,13 @@ class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'latest_question_list'
 
-    kkk =100
     def get_queryset(self):
         # return Question.objects.order_by('pub_data')[:5]
         return Question.objects.filter(pub_data__lte = timezone.now()).order_by('pub_data')[:5]
 
 class DetailView(generic.DetailView):
 
-    d = 10
-    b=10
-    c=15
+
     model = Question
     template_name = 'polls/detail.html'
 
