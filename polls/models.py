@@ -41,6 +41,7 @@ class Student(models.Model):
         max_length=2,
         choices=YEAR_IN_SCHOOL_CHOICES,
         default=FRESHMAN,
+        verbose_name= "student",
     )
 
     def is_upperclass(self):
